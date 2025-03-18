@@ -3,20 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cart</title>]
+    <title>Cart Quantity</title>]
     <style>
     
     </style>
 </head>
 <body>
     <h1>Cart Quantity</h1>
-    <button>Show Quantity</button>
-    <button>Add to cart</button>
-    <button>+2</button>
-    <button>+3</button>
-    <button>Reset Cart</button>
+    <button onclick = "
+            console.log(`Cart Quantity:  ${cartQuantity}`);
+    ">Show Quantity</button>
+    <button onclick = "
+        cartQuantity++;
+        console.log(`Cart Quantity:  ${cartQuantity}`);
+    ">Add to cart</button>
+    <button onclick="
+       cartQuantity = cartQuantity + 2;
+       console.log(`Cart Quantity:  ${cartQuantity}`);
+    ">+2</button>
+    <button onclick = "
+        cartQuantity = cartQuantity + 3;
+        console.log(`Cart Quantity:  ${cartQuantity}`);
+    ">+3</button>
+    <button ondblclick="
+        cartQuantity = 0;
+        console.log(`Cart Quantity:  ${cartQuantity}`);
+    ">Reset Cart</button>
     <script>
-        console.log('hello world');
+        let cartQuantity = 0;
     </script>
 </body>
 </html>
