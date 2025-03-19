@@ -30,6 +30,8 @@
         play('Scissors',computerMove);
     ">Scissors</button>
 
+    <p class="js-score-display"></p>
+
     <button onclick = "
         score.Wins = 0;
         score.Loses = 0;
@@ -38,6 +40,9 @@
 
 
     <script>
+        const scoreElement = document.querySelector('.js-score-display');
+        scoreElement.innerText = `You chose ${playerMove}.computer chose ${computerMove}.so result is ${result}
+Score is: Wins(${score.Wins}),Loses(${score.Loses}),Ties(${score.Ties})`
         const score = {
             Wins: 0,
             Loses: 0,
