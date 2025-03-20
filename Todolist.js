@@ -5,9 +5,9 @@ function renderTodoList(){
         const todoObject = todoList[i];
         const {name,duedate} = todoObject;
         const html = `
-        <div>${name}</div>
-        <div>${duedate}</div>
-        <button onclick= "
+        <div class="div-object">${name}</div>
+        <div class="div-object">${duedate}</div>
+        <button class="delete-button" onclick= "
             todoList.splice(${i},1);
             renderTodoList();
         ">delete</button>
